@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CASIA-SIMS Dataset</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <style>
+    .menu-forum23-over {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container">
+    <div class="menu">
+      <div class="menu-table flex-row-space-between">
+        <div class="logo flex-row-center">
+          <a href="../index.html">CASIA-SIMS Dataset</a>
+        </div>
+        <a class="menu-button" tabindex="0" href="javascript:void(0)">
+          <img src="../img/utilities/menu.png">
+        </a>
+        <div class="menu-items flex-row-center flex-item">
+            <div class="dropdown">
+              <a class="dropbtn" href="../overview/index.html">Overview<i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="dropdown">
+              <a class="dropbtn" href="../calibration/index.html">Calibration<i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="dropdown">
+              <a class="dropbtn" href="../groundtruth/index.html">Groundtruth<i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="dropdown">
+              <a class="dropbtn" href="../download/index.html">Download<i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="dropdown">
+              <a class="dropbtn" href="../contact/index.html">Citation<i class="fas fa-caret-down"></i></a>
+            </div>
+            <!-- <a href="https://github.com/xxxx">GitHub</a> -->
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="content-table flex-column">
+      <div class="flex-row">
+        <div class="flex-item flex-column">
+          <h2 class="no-top-margin">Groundtruth</h2>
+          <p>The timestamped translation vector
+            and unit quaternion of the ground truth trajectory
+            (from the camera coordinate to the world coordinate. Format:</p>
+            <p class="language-text">
+              timestamp[i] p_x p_y p_z q_x q_y q_z q_w
+            </p>
+          <p class="text">
+            The ground truth 3D point cloud models are acquired simultaneously with the corresponding trajectories using
+            GeoSLAM. In the same scene, for different trajectories,
+            the models are in different coordinate systems. Using
+            CloudCompare2, we merge the 3D point cloud models as
+            a complete model for each scene. The process involves
+            a first coarse alignment by manually selecting point
+            correspondences and a densely sampled fine alignment
+            using Iterative Closest Point (ICP). Based on the two steps, a
+            global calibration for each scene is given so that the 3D point
+            cloud models are unified in a global coordinate system. After
+            manually eliminating moving objects, we provide a complete
+            point model with the standard .las file format for each scene.
+            Similarly, transforming trajectories from the original world
+            frame to the global coordinate frame is done by applying the rigid transformation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p> Copyright © 2023.<br> State Key Laboratory of Multimodal Artificial Intelligence, Institute of Automation & Horizon Robotics. <br>All rights reserved. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
