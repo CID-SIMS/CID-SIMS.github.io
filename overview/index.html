@@ -55,34 +55,87 @@
     <div class="content-table flex-column">
       <div class="flex-row">
         <div class="flex-item flex-column">
+
+          <h2 class="no-top-margin">About this dataset</h2>
+          <hr>
+          <p class="text">
+            To advance research in leveraging semantic information
+            and multi-sensor data to enhance the performances of SLAM and 3D reconstruction in complex indoor scenes, we
+            propose a novel and complex indoor dataset named CID-SIMS, where semantic annotated RGBD images, inertial
+            measurement unit (IMU) measurements and wheel odometer data are provided from a ground wheeled robot viewpoint.
+            The dataset consists of 22 challenging sequences captured in 9 different scenes including office building and apartment
+            environments. Notably, our dataset achieves two significant breakthroughs. Firstly, semantic information and multi-sensor 
+            data are provided meanwhile for the first time. 
+            Secondly, <a href="https://geoslam.com/">GeoSLAM</a> is utilized for the first time to generate
+            ground truth trajectories and 3D point clouds within 2 cm accuracy. With spatial-temporal synchronous ground truth
+            trajectories and 3D point clouds, our dataset is capable of evaluating SLAM and 3D reconstruction algorithms in a
+            unified global coordinate system.
+          </p>
+
           <h2 class="no-top-margin">Sequences</h2>
           <hr>
+          <p class="text">
+            Sequences in this dataset are mainly from a ground wheeled
+            robot with two camera views (approximately 0.26 m (high)
+            and 0.12 m (low) above the ground), except for two
+            sequences that contain handheld situations when going
+            downstairs. The dataset covers a large variety of scenes
+            and motion modes. There are some challenging scenarios such as motion blurs, illumination
+            changes, reflective objects and weak textures. 
+          </p>
+
           <h3>Statistics</h3>
-          <br>
-          <img class="image center add-top-margin-small" src="../img/overview/env.png" width=800px height=400px />
-          <br>
           <img class="image center add-top-margin-small" src="../img/overview/sequence_table.png" style="height: 400px">
           <br>
           <h3>Office Building</h3>
+          <img class="image center add-top-margin-small" src="../img/overview/building.png" width=800px height=200px />
           <p class="text">
-            We collect 13 sequences in typical
-            office building environments, which cover 6 different scenes.
-            These sequences are captured during the day with windows
-            and daylight appearing a few times. Sequences in floor
-            scenes are more challenging because of insufficient rotation
+            We collect 13 sequences in a typical
+            office building, which cover 6 different scenes. Sequences in
+            floor scenes are challenging because of insufficient rotation
             and weak textures.
+            <li><b>Office: </b> Three sequences are captured inside a small
+              office room (about 6 m × 7 m), where all the objects are static.</li>
+            <li><b>Floor14: </b> Three sequences are captured in the open
+              office area on the 14th floor of a building, including
+              illumination changes and dynamic pedestrians.</li>
+            <li><b>Downstairs: </b> A sequence is collected in the stairwell
+              by carrying the robot going downstairs by hand.
+              The sequence is under 6-DoF motion and the wheel
+              odometer data is missing.</li>
+            <li><b>Two floors: </b> A long sequence is recorded by firstly
+              moving on the 14th floor, then going downstairs, next
+              moving on the 13th floor and finally going back to the
+              14th floor. When passing through the stairs, the wheel
+              odometer data is unavailable.</li>
+            <li><b>Floor3: </b> Three sequences are captured along corridors
+              (about 70 m) with straight line motion, dynamic
+              pedestrians, reflective objects and an uphill movement.</li>
+            <li><b>Floor13: </b> Two long sequences are recorded in a long
+              corridor (about 65 m).</li>
           </p>
           <h3>Apartment</h3>
+          <img class="image center add-top-margin-small" src="../img/overview/apartment.png" width=800px height=200px />
           <p class="text">
-            We recorded 9 sequences in real living
+            We record 9 sequences in real living
             environments, which cover 3 different apartments. The
-            apartments are about 10m × 10m, including a living room,
-            two or three bedrooms, a bathroom and a kitchen. The
-            rooms are cluttered with small and unstructured obstacles.
-            Sequences in apartment scenes contain rich loops and
-            rotational motions. There are also special situations such as
-            motion blur, weak texture and reflective objects
+            apartments are about 10 m × 10 m, including a living
+            room, two or three bedrooms, a bathroom and a kitchen.
+            These rooms are cluttered with small and unstructured
+            obstacles. Sequences in apartment scenes contain rich loops
+            and rotational motions. There are also challenging situations
+            such as motion blurs, weak textures and reflective objects.
+            <li><b>Apartment1: </b> Three sequences are captured in an
+              apartment during the day, where the tiled floor is
+              reflective.</li>
+            <li><b>Apartment2: </b> Three sequences are collected in an
+              apartment during the day. The apartment is messy, in
+              which dust and litter cause uneven floors.</li>
+            <li><b>Apartment3: </b> Three sequences are acquired in an
+              apartment at night with the lights turned on.</li>
           </p>
+
+
 
 
         </div>

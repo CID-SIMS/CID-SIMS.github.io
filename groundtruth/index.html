@@ -55,29 +55,38 @@
     <div class="content-table flex-column">
       <div class="flex-row">
         <div class="flex-item flex-column">
-          <h2 class="no-top-margin">Groundtruth</h2>
+
+          <h2 class="no-top-margin">Groundtruth 3D Point Clouds</h2>
+          <hr>
+          <p>The ground truth 3D point clouds are acquired simultaneously with the corresponding trajectories.
+            We merge the 3D point clouds as a complete point cloud for each scene.</p>
+
+          <video width="870.4" height="652.8" controls>
+            <source src="./models.mp4" type="video/mp4">
+          </video>
+          
+          <br>
+
+          <h2 class="no-top-margin">Groundtruth Trajectories</h2>
+          <hr>
           <p>The timestamped translation vector
-            and unit quaternion of the ground truth trajectory
-            (from the camera coordinate to the world coordinate. Format:</p>
+            and unit quaternion of a ground truth trajectory
+            from the camera coordinate to the world coordinate are formatted as:</p>
             <p class="language-text">
               timestamp[i] p_x p_y p_z q_x q_y q_z q_w
             </p>
           <p class="text">
-            The ground truth 3D point cloud models are acquired simultaneously with the corresponding trajectories using
-            GeoSLAM. In the same scene, for different trajectories,
-            the models are in different coordinate systems. Using
-            CloudCompare2, we merge the 3D point cloud models as
-            a complete model for each scene. The process involves
-            a first coarse alignment by manually selecting point
-            correspondences and a densely sampled fine alignment
-            using Iterative Closest Point (ICP). Based on the two steps, a
-            global calibration for each scene is given so that the 3D point
-            cloud models are unified in a global coordinate system. After
-            manually eliminating moving objects, we provide a complete
-            point model with the standard .las file format for each scene.
-            Similarly, transforming trajectories from the original world
-            frame to the global coordinate frame is done by applying the rigid transformation.
+            Similarly, transforming trajectories from the original world frame to the global coordinate frame is done by applying the rigid transformation.
           </p>
+
+          
+
+
+
+
+          
+
+          
         </div>
       </div>
     </div>
