@@ -65,7 +65,7 @@
               truth trajectories and 3D point clouds, a high-precision
               3D laser scanner called GeoSLAM is fixed on the top of
               the robot. In addition, to enrich the dataset, two different
-              viewpoints (high and low) are designed for capturing images.
+              viewpoints (high and low) are selected for capturing images.
               The figure below illustrates the robot setup, the coordinate systems
               of all sensors and two different viewpoints for the RGBD
               camera.
@@ -74,14 +74,11 @@
             <h3>RGBD camera</h3>
             <p class="text">
               <a href="https://www.intelrealsense.com/depth-camera-d455/">The Intel RealSense Depth Camera D455</a>
-              is chosen as the
-              RGBD camera. A global shutter camera is used to capture
-              color images. Active Infrared (IR) Stereo Vision Technology is employed to generate depth measurements. The ideal
-              depth range is 0.6 to 6 meters from the image plane, and
-              the error is less than 2% within 4 meters. The RealSense
-              D455 can provide aligned color and depth image data with
-              a resolution of 640 × 480 pixels at the rate of 30 fps, where
-              the unit of depth is a millimeter.
+              , a global shutter RGBD camera, is
+              chosen to capture aligned RGB images and depth maps with
+              the resolution of 640 × 480 pixels at 30 fps. The ideal depth
+              range is 0.6 meters to 6 meters from the image plane, and the
+              error is less than 2% within 4 meters.
             </p>
         
             <h3>IMU</h3>
@@ -91,9 +88,7 @@
               gyroscope measurements at 200 Hz. The resolution of
               accelerometer and the gyroscope are 0.98 mg and 0.004 ◦/s
               and the noise density are 150 μg/√Hz and 0.014 ◦/s/√Hz,
-              respectively. The cameras and IMU sensors are strictly time-
-              synchronized in hardware and their coordinate systems are
-              pre-aligned as well.
+              respectively.
             </p>
 
             <h3>Wheel Odometer</h3>
@@ -128,7 +123,7 @@
             <p class="text">
               Our benchmark provides accurate intrinsic and extrinsic
               parameters calibration and time synchronization for different
-              sensors and the 3D laser scanner, as shown in the table below. All parameters are reported in
+              sensors and the 3D laser scanner, as shown in the table below. All the parameters are reported in
               <a href="./calibration.yaml">calibration.yaml</a>.
             </p>
 

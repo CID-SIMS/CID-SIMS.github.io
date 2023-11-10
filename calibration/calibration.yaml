@@ -34,6 +34,9 @@ T_ItoC: !!opencv-matrix
     0.00319195, -0.0061454, 0.99997602, -0.01595186,
     0., 0., 0., 1.]
 
+timeshift_CtoI: -0.0097648780485 # [s] (t_imu = t_cam + shift)
+
+
 # color-depth extrinsics
 # transform a point from depth CAM frame to color CAM frame
 T_DtoC: !!opencv-matrix
